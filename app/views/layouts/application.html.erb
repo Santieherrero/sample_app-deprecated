@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby on Rails | <%= yield(:title) %></title>
+  <title><%= title_bar yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags  %> <!-- which prevents cross-site request 				forgery (CSRF), a type of malicious web attack -->
 </head>
-<body>
+ <!--[if lt IE 9]>
+ 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]-->
+ 	
 
+<body>
+<%=  %>
+<div class = "navbar-inner">
+		
+	<%= link_to "sample app", '#', id: "logo" %>
+	<nav>
+		<ul class="nav pull-right">
+			<li><%= link_to "Home",    '#' %></li>
+			<li><%= link_to "Help",    '#' %></li>
+			<li><%= link_to "Sign in", '#' %></li>
+		</ul>
+	</nav>
+</div>
+
+<div class ="container">
 <%= yield %>
+</div>
+
+
 </body>
 </html>

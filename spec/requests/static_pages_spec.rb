@@ -14,7 +14,13 @@ describe "Home Page" do
 	it "should have the right title" do
 	  
 		visit '/static_pages/home'
-		page.should have_selector('title', text: "Ruby on Rails | Home")
+		page.should have_selector('title', text: "| Home") #Esta para que falle
+	end
+
+	it "should have the base title" do
+		visit '/static_pages/home'
+		page.should have_selector('title', text: "Ruby on Rails")
+		
 	end
 end
  
@@ -29,7 +35,7 @@ end
 	it "should have the right title" do
 	  
 		visit '/static_pages/help'
-		page.should have_selector('title', text: "Ruby on Rails | Help")
+		page.should have_selector('title', text: "| Help")
 	end
 	
 end 
@@ -46,9 +52,9 @@ end
 	it "should have the right title" do
 	  
 		visit '/static_pages/about'
-		page.should have_selector('title', text: "Ruby on Rails | About us")
+		page.should have_selector('title', text: "| About us")
 	end
-	
+
 end 
 
 

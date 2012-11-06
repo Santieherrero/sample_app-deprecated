@@ -7,6 +7,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
+gem 'pg', '0.12.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -14,6 +15,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'  #Guard automatiza los test cuando cambiamos un archivo
   gem 'guard-spork', '1.2.0'  #spork nos ayuda a tener mayor rapidez en test
   gem 'spork', '0.9.2'
+  gem 'thin'
 end
 
 # Gems used only for assets and not required
