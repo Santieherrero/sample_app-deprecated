@@ -2,31 +2,21 @@
 <html>
 <head>
   <title><%= title_bar yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "screen" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags  %> <!-- which prevents cross-site request 				forgery (CSRF), a type of malicious web attack -->
+  <%= render 'layouts/shared/shim' %>
 </head>
- <!--[if lt IE 9]>
- 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
- <![endif]-->
- 	
-
+ 
 <body>
-<%=  %>
-<div class = "navbar-inner">
-		
-	<%= link_to "sample app", '#', id: "logo" %>
-	<nav>
-		<ul class="nav pull-right">
-			<li><%= link_to "Home",    '#' %></li>
-			<li><%= link_to "Help",    '#' %></li>
-			<li><%= link_to "Sign in", '#' %></li>
-		</ul>
-	</nav>
-</div>
+
+<%= render 'layouts/shared/header' %>
+
+
 
 <div class ="container">
 <%= yield %>
+<%= render 'layouts/shared/footer' %>
 </div>
 
 
