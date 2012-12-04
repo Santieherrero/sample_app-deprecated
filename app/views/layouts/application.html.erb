@@ -17,7 +17,8 @@
 
 <div class ="container">
 	<% flash.each do |key,value| %>
-	 <div class="alert alert-<%= key %>"><%= value %></div>
+	<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+	<% #introduce un tag como div con su valor y clase %> 
 	 <% end %>
 
 	<%= yield %>
