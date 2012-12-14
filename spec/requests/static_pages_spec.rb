@@ -57,6 +57,8 @@ end
 	should_not have_selector 'title',text: title_bar('Home') 
 	click_link "Sign up now!"
 	should have_selector 'title',text: title_bar('Sign up') 
+	click_link "Sign in"
+	should have_selector 'title',text: title_bar('Sign in')
 
 
 	end
