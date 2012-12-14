@@ -15,7 +15,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'  #Guard automatiza los test cuando cambiamos un archivo
   gem 'guard-spork', '1.2.0'  #spork nos ayuda a tener mayor rapidez en test
   gem 'spork', '0.9.2'
-  #gem 'thin' #Ayuda en la eficiencia en development
+  gem 'thin' #Ayuda en la eficiencia en development
   gem 'annotate', '2.5.0' #nos da una informacion del model en comentario
 end
 
