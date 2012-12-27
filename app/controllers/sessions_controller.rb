@@ -10,7 +10,7 @@ def create
 
 	if user && user.authenticate(params[:session][:password])
  		sign_in user
- 		redirect_to current_user
+ 		redirect_back_or user
 	else
 		#.now no hara que se vea el error una segunda vez
  		flash.now[:error] = "Invalid password combination" 
