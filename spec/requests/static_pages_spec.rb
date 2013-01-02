@@ -16,6 +16,23 @@ describe "Home Page" do
 	it{ should have_selector('h1', text: 'Sample App')}
 	it{should_not have_selector('title', text: title_bar('Home')) }
 	it{should have_selector('title', text: title_bar(''))}
+
+	describe "for signed-in users" do
+		let(:user) { FactoryGirl.create(:user) }
+
+		before
+			FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
+			FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
+			sign_in user
+			visit root_path
+		end
+
+		it "should render the user's feed" do
+			
+			
+		end
+
+	end
 	
 end
  
