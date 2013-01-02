@@ -1,4 +1,4 @@
-module ApplicationHelper
+ module ApplicationHelper
 
 	def title_bar(page_title)
 		base_title = "Ruby on Rails"
